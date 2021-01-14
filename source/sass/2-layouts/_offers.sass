@@ -7,7 +7,15 @@
 .offers-cards
     display: grid
     grid-template-columns: repeat(3, auto)
-    grid-template-rows: repeat(3, auto)
+    align-content: center
+    justify-content: center
+    //grid-template-rows: repeat(3, auto)
+
+    @media screen and ( max-width: 980px )
+        grid-template-columns: repeat(2, auto)
+    @media screen and ( max-width: 660px )
+        grid-template-columns: repeat(1, auto)
+
 
 .card
-    margin-top: 20px
+    margin: 20px

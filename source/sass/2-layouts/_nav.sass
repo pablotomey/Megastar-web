@@ -8,6 +8,10 @@
     align-items: center
     margin: 0px
 
+    @media screen and ( max-width: 1127px )
+        padding-right: 40px
+        
+
     li
         display: inline-block
         list-style: none
@@ -15,6 +19,41 @@
     
     li:first-child
         margin-right: auto
+    
+    li:first-child a
+        margin-left: 0px
+
+    li.nav-toggle
+        display: none
+
+    @media screen and ( max-width: 660px )
+        li.nav-toggle
+            display: block
+            z-index: 100
+
+        li.nav-toggle a
+            padding: 8px 0px
+        
+        .responsive-nav
+            display: none
+
+        .responsive-nav.show-nav
+            display: block
+            text-align: left
+            width: 100%
+            background: $primary-color
+            position: absolute
+            top: 0
+            right: 0
+
+        .responsive-nav.show-nav li
+            display: block
+            padding: 10px
+
+        .responsive-nav.show-nav a
+            font-size: 18px
+            font-weight: bold
+
 
     a
         font-weight: bold

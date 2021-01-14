@@ -3,14 +3,18 @@
     color: $font-white
     //display: flex
 
-.category-items
-   display: flex
+
 
 .second-nav
     display: flex
-    margin: auto
+    justify-content: center
+    margin: 0 auto
+
+    @media screen and ( max-width: 660px )
+        padding-left: 0px
 
     li  
+        display: inline-block
         list-style: none
 
         a
@@ -20,10 +24,16 @@
             color: $font-white
             padding: 10px
             transition: all 0.2s ease
+
+            @media screen and ( max-width: 660px )
+                font-size: 12px
+                padding: 8px
+                margin: 6px
         
         a:hover
             background: white
             border-radius: 10px
             color: $secondary-color
 
+        
 
