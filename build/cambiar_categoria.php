@@ -35,12 +35,17 @@
         <select class="form-select" name="category" aria-label="Default select example">
             <option selected>Cambiar categoría</option>
             <option value="header">header</option>
+            <option value="destacados">destacados</option>
             <option value="ofertas">ofertas</option>
             <option value="juguetes">juguetes</option>
-            <option value="ropa">ropa</option>
+            <option value="ropa-hombre">ropa hombre</option>
+            <option value="ropa-mujer">ropa mujer</option>
+            <option value="ropa-infantil">ropa infantil</option>
             <option value="electronica">electronica</option>
             <option value="hogar">hogar</option>
             <option value="zapatillas">zapatillas</option>
+            <option value="camping">camping</option>
+            <option value="accesorios">accesorios</option>
           </select>
         <div class="d-grid gap-2" style="margin-top:15px;">
           <button class="btn btn-primary" type="submit">Actualizar categoría</button>

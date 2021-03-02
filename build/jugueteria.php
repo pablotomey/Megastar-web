@@ -18,7 +18,7 @@
         <ul class="main-nav">
           <li><a href="index.php" style="margin-left: 0px;"><img src="img/logo-megastar.svg" alt="logo megastar"></a></li>
           <div id="responsive-nav" class="responsive-nav">
-            <li><a href="#offers">Ofertas</a></li>
+            <li><a href="./ofertas.php">Ofertas</a></li>
             <li><a href="./ubicacion.html">Ubicación</a></li>
           </div>
             <li class="nav-toggle"><a href="javascript: void(0)" onclick="showNav()"><img src="img/icon_menu.svg"></a></li>
@@ -29,13 +29,15 @@
   <!--Category-nav-->
   <section id="category-nav">
     <div class="wrapper">
-      <nav>
+    <nav>
         <ul class="second-nav">
             <li><a href="jugueteria.php">Juguetes</a></li>
             <li><a href="ropa.php">Ropa</a></li>
             <li><a href="electronica.php">Electrónica</a></li>
             <li><a href="hogar.php">Hogar</a></li>
             <li><a href="zapatillas.php">Zapatillas</a></li>
+            <li><a href="camping.php">Camping</a></li>
+            <li><a href="accesorios.php">Accesorios</a></li>
         </ul>
       </nav>
     </div>
@@ -90,8 +92,8 @@
           <dir class="footer-social-media">
             <h4>Siguenos en:</h4>
             <div>
-              <a href="#"><img src="img/facebook-logo.svg" alt="facebook-logo"></a>
-              <a href="#"><img src="img/instagram-logo.svg" alt="facebook-logo"></a>
+              <a href="https://www.facebook.com/groups/894238500611824/?ref=share"><img src="img/facebook-logo.svg" alt="facebook-logo"></a>
+              <a href="https://www.instagram.com/josephporvenir/"><img src="img/instagram-logo.svg" alt="instagram-logo"></a>
             </div>
           </dir>
         </div>

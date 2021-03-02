@@ -18,7 +18,7 @@
         <ul class="main-nav">
           <li><a href="index.php" style="margin-left: 0px;"><img src="img/logo-megastar.svg" alt="logo megastar"></a></li>
           <div id="responsive-nav" class="responsive-nav">
-            <li><a href="#offers">Ofertas</a></li>
+            <li><a href="./ofertas.php">Ofertas</a></li>
             <li><a href="./ubicacion.html">Ubicación</a></li>
           </div>
             <li class="nav-toggle"><a href="javascript: void(0)" onclick="showNav()"><img src="img/icon_menu.svg"></a></li>
@@ -29,13 +29,15 @@
   <!--Category-nav-->
   <section id="category-nav">
     <div class="wrapper">
-      <nav>
+    <nav>
         <ul class="second-nav">
             <li><a href="jugueteria.php">Juguetes</a></li>
             <li><a href="ropa.php">Ropa</a></li>
             <li><a href="electronica.php">Electrónica</a></li>
             <li><a href="hogar.php">Hogar</a></li>
             <li><a href="zapatillas.php">Zapatillas</a></li>
+            <li><a href="camping.php">Camping</a></li>
+            <li><a href="accesorios.php">Accesorios</a></li>
         </ul>
       </nav>
     </div>
@@ -45,31 +47,34 @@
     <div class="wrapper">
         <h1 class="title">Moda y vestuario</h1>
     </div>
-</section>
+  </section>
 
   <!--Ofertas-->
   <section id="offers">
     <div class="wrapper">
-      <h1>Toda la gama en textíl encuentrala aquí</h1>
+      <h1>Busca ropa por categoría</h1>
       <div class="offers-cards">
-      <?php
-        require 'db.php';
-        $ropa = "ropa";
-        $sql2 = "SELECT * FROM producto WHERE category='".$ropa."' ";
-        $query = mysqli_query($conn, $sql2);
-
-        while($fila = mysqli_fetch_array($query)) {
-
-        ?>
         <div class="card" style="width: 18rem;">
-          <img src="<?php echo $fila['image'] ?>" class="card-img-top" alt="...">
+          <a href="./ropa-hombre.php"><img src="img/ropa-hombre-img.jpg" class="card-img-top" alt="..."></a>
           <div class="card-body">
-            <h5 class="card-title"><?php echo $fila['name'] ?></h5>
-            <p class="card-text"><?php echo $fila['description'] ?></p>
-            <p><?php echo $fila['precio'] ?></p>
+            <h5 class="card-title">Ropa de hombre</h5>
+            <p class="card-text"></p>
           </div>
         </div>
-        <?php } ?>
+        <div class="card" style="width: 18rem;">
+          <a href="./ropa-mujer.php"><img src="img/ropa-mujer-img.jpg" class="card-img-top" alt="..."></a>
+          <div class="card-body">
+            <h5 class="card-title">Moda Mujer</h5>
+            <p class="card-text"></p>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <a href="./ropa-niño.php"><img src="img/ropa-niño-img.jpg" class="card-img-top" alt="..."></a>
+          <div class="card-body">
+            <h5 class="card-title">Textil Infantil</h5>
+            <p class="card-text"></p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -90,8 +95,8 @@
           <dir class="footer-social-media">
             <h4>Siguenos en:</h4>
             <div>
-              <a href="#"><img src="img/facebook-logo.svg" alt="facebook-logo"></a>
-              <a href="#"><img src="img/instagram-logo.svg" alt="facebook-logo"></a>
+              <a href="https://www.facebook.com/groups/894238500611824/?ref=share"><img src="img/facebook-logo.svg" alt="facebook-logo"></a>
+              <a href="https://www.instagram.com/josephporvenir/"><img src="img/instagram-logo.svg" alt="instagram-logo"></a>
             </div>
           </dir>
         </div>

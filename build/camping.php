@@ -26,7 +26,6 @@
       </nav>
     </div>
   </section>
-
   <!--Category-nav-->
   <section id="category-nav">
     <div class="wrapper">
@@ -44,21 +43,21 @@
     </div>
   </section>
 
-  <section id="header-hogar">
+  <section id="header-camping">
     <div class="wrapper">
-        <h1 class="title">Artículos para el hogar</h1>
+        <h1 class="title">Productos para el aire libre</h1>
     </div>
-</section>
+  </section>
 
   <!--Ofertas-->
   <section id="offers">
     <div class="wrapper">
-      <h1>Variados artículos para tu casa</h1>
+      <h1>Todo para tu camping</h1>
       <div class="offers-cards">
       <?php
         require 'db.php';
-        $hogar = "hogar";
-        $sql2 = "SELECT * FROM producto WHERE category='".$hogar."' ";
+        $camping = "camping";
+        $sql2 = "SELECT * FROM producto WHERE category='".$camping."' ";
         $query = mysqli_query($conn, $sql2);
 
         while($fila = mysqli_fetch_array($query)) {

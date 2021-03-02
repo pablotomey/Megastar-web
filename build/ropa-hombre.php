@@ -26,7 +26,6 @@
       </nav>
     </div>
   </section>
-
   <!--Category-nav-->
   <section id="category-nav">
     <div class="wrapper">
@@ -44,21 +43,21 @@
     </div>
   </section>
 
-  <section id="header-hogar">
+  <section id="header-ropa-hombre">
     <div class="wrapper">
-        <h1 class="title">Artículos para el hogar</h1>
+        <h1 class="title">La mejor moda Masculina</h1>
     </div>
-</section>
+  </section>
 
   <!--Ofertas-->
   <section id="offers">
     <div class="wrapper">
-      <h1>Variados artículos para tu casa</h1>
+      <h1>Encuentra todo el vestuario hombre</h1>
       <div class="offers-cards">
       <?php
         require 'db.php';
-        $hogar = "hogar";
-        $sql2 = "SELECT * FROM producto WHERE category='".$hogar."' ";
+        $ropaHombre = "ropa-hombre";
+        $sql2 = "SELECT * FROM producto WHERE category='".$ropaHombre."' ";
         $query = mysqli_query($conn, $sql2);
 
         while($fila = mysqli_fetch_array($query)) {
