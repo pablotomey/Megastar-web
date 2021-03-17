@@ -18,26 +18,11 @@
         <ul class="main-nav">
           <li><a href="index.php" style="margin-left: 0px;"><img src="img/logo-megastar.svg" alt="logo megastar"></a></li>
           <div id="responsive-nav" class="responsive-nav">
+            <li><a href="./index.php">Inicio</a></li>
             <li><a href="./ofertas.php">Ofertas</a></li>
             <li><a href="./ubicacion.html">Ubicación</a></li>
           </div>
             <li class="nav-toggle"><a href="javascript: void(0)" onclick="showNav()"><img src="img/icon_menu.svg"></a></li>
-        </ul>
-      </nav>
-    </div>
-  </section>
-  <!--Category-nav-->
-  <section id="category-nav">
-    <div class="wrapper">
-      <nav>
-        <ul class="second-nav">
-            <li><a href="jugueteria.php">Juguetes</a></li>
-            <li><a href="ropa.php">Ropa</a></li>
-            <li><a href="electronica.php">Electrónica</a></li>
-            <li><a href="hogar.php">Hogar</a></li>
-            <li><a href="zapatillas.php">Zapatillas</a></li>
-            <li><a href="camping.php">Camping</a></li>
-            <li><a href="accesorios.php">Accesorios</a></li>
         </ul>
       </nav>
     </div>
@@ -79,26 +64,64 @@
   <!--Ofertas-->
   <section id="offers">
     <div class="wrapper">
-      <h1>Productos destacados Megastar</h1>
+      <h1>Elíge una categoría</h1>
       <div class="offers-cards">
-      <?php
-
-        $destacados = "destacados";
-        $sql2 = "SELECT * FROM producto WHERE category='".$destacados."' ";
-        $query = mysqli_query($conn, $sql2);
-
-        while($fila = mysqli_fetch_array($query)) {
-
-        ?>
-        <div class="card" style="width: 18rem;">
-          <img src="<?php echo $fila['image'] ?>" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title"><?php echo $fila['name'] ?></h5>
-            <p class="card-text"><?php echo $fila['description'] ?></p>
-            <p><?php echo $fila['precio'] ?></p>
+      <a href="./jugueteria.php">
+        <div class="card bg-dark text-white" style="width: 18rem;">
+          <img src="img/jugueteria-cat-img.png" class="card-img-top" alt="...">
+          <div class="card-img-overlay">
+            <h5 class="card-title">Jugueteria</h5>
           </div>
         </div>
-        <?php } ?>
+        </a>
+        <a href="./electronica.php">
+        <div class="card bg-dark text-white" style="width: 18rem;">
+          <img src="img/electronica-cat-img.png" class="card-img-top" alt="...">
+          <div class="card-img-overlay">
+            <h5 class="card-title">Electrónica</h5>
+          </div>
+        </div>
+        </a>
+        <a href="./ropa.php">
+        <div class="card bg-dark text-white" style="width: 18rem;">
+          <img src="img/ropa-cat-img.png" class="card-img-top" alt="...">
+          <div class="card-img-overlay">
+            <h5 class="card-title">Textil</h5>
+          </div>
+        </div>
+        </a>
+        <a href="./hogar.php">
+        <div class="card bg-dark text-white" style="width: 18rem;">
+          <img src="img/hogar-cat-img.png" class="card-img-top" alt="...">
+          <div class="card-img-overlay">
+            <h5 class="card-title">Hogar</h5>
+          </div>
+        </div>
+        </a>
+        <a href="./zapatillas.php">
+        <div class="card bg-dark text-white" style="width: 18rem;">
+          <img src="img/zapatillas-cat-img.png" class="card-img-top" alt="...">
+          <div class="card-img-overlay">
+            <h5 class="card-title">Zapatillas</h5>
+          </div>
+        </div>
+        </a>
+        <a href="./camping.php">
+        <div class="card bg-dark text-white" style="width: 18rem;">
+          <img src="img/camping-cat-img.png" class="card-img-top" alt="...">
+          <div class="card-img-overlay">
+            <h5 class="card-title">Camping</h5>
+          </div>
+        </div>
+        </a>
+        <a href="./accesorios.php">
+        <div class="card bg-dark text-white" style="width: 18rem;">
+          <img src="img/accesorios-cat-img.png" class="card-img-top" alt="...">
+          <div class="card-img-overlay">
+            <h5 class="card-title">Accesorios</h5>
+          </div>
+        </div>
+        </a>
       </div>
     </div>
   </section>

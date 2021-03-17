@@ -18,27 +18,11 @@
         <ul class="main-nav">
           <li><a href="index.php" style="margin-left: 0px;"><img src="img/logo-megastar.svg" alt="logo megastar"></a></li>
           <div id="responsive-nav" class="responsive-nav">
+            <li><a href="./index.php">Inicio</a></li>
             <li><a href="./ofertas.php">Ofertas</a></li>
             <li><a href="./ubicacion.html">Ubicación</a></li>
           </div>
             <li class="nav-toggle"><a href="javascript: void(0)" onclick="showNav()"><img src="img/icon_menu.svg"></a></li>
-        </ul>
-      </nav>
-    </div>
-  </section>
-
-  <!--Category-nav-->
-  <section id="category-nav">
-    <div class="wrapper">
-    <nav>
-        <ul class="second-nav">
-            <li><a href="jugueteria.php">Juguetes</a></li>
-            <li><a href="ropa.php">Ropa</a></li>
-            <li><a href="electronica.php">Electrónica</a></li>
-            <li><a href="hogar.php">Hogar</a></li>
-            <li><a href="zapatillas.php">Zapatillas</a></li>
-            <li><a href="camping.php">Camping</a></li>
-            <li><a href="accesorios.php">Accesorios</a></li>
         </ul>
       </nav>
     </div>

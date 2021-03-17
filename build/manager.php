@@ -11,17 +11,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.min.css" />
   <title>MegaStar</title>
 </head>
 
 <body>
 
-  <?php
+<?php
     require 'db.php';
-    $sql = "SELECT * FROM producto";
+    $category = '';
+
+    if (empty($_REQUEST['category'])) {
+      $sql = "SELECT * FROM producto";
+    } else {
+      $category = $_REQUEST['category'];
+      $sql = "SELECT * FROM producto WHERE category='".$category."'";
+    }
+    
     $resultado = mysqli_query($conn, $sql);
   ?>
   <section id="products">
@@ -31,6 +39,29 @@
       </div>
       <a href="agregar_producto.php" type="button" class="btn btn-success" style="margin-bottom: 20px;">Agregar producto</a>
       <a href="cerrar_sesion.php" type="button" class="btn btn-success btn-danger" style="margin-bottom: 20px;">Salir</a>
+
+      <form class="row g-3" action="manager.php" method="get">
+        <div class="col-auto">
+          <select class="form-select" name="category" style="width: 250px;" aria-label="Default select example" require>
+            <option selected>Filtrar por categoría</option>
+            <option value="header">header</option>
+            <option value="ofertas">ofertas</option>
+            <option value="juguetes">juguetes</option>
+            <option value="ropa-hombre">ropa hombre</option>
+            <option value="ropa-mujer">ropa mujer</option>
+            <option value="ropa-infantil">ropa infantil</option>
+            <option value="electronica">electronica</option>
+            <option value="hogar">hogar</option>
+            <option value="zapatillas">zapatillas</option>
+            <option value="camping">camping</option>
+            <option value="accesorios">accesorios</option>
+          </select>
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary mb-3">Filtrar</button>
+        </div>
+      </form>
+
       <table class="table table-striped table-hover" style="font-size:15px;">
         <thead class="thead-dark">
           <tr>
@@ -67,12 +98,11 @@
 
   </section>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  <!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
 
 </html>
