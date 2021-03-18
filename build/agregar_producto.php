@@ -35,7 +35,6 @@
       <select class="form-select" name="category" aria-label="Default select example" require>
         <option selected>Seleccionar categoría</option>
         <option value="header">header</option>
-        <option value="destacados">destacados</option>
         <option value="ofertas">ofertas</option>
         <option value="juguetes">juguetes</option>
         <option value="ropa-hombre">ropa hombre</option>

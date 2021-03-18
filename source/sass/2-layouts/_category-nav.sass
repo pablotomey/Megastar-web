@@ -11,6 +11,8 @@
     margin: 0 auto
 
     @media screen and ( max-width: 660px )
+        display: grid
+        grid-template-columns: repeat(4,auto)
         padding-left: 0px
 
     li  
@@ -26,6 +28,7 @@
             transition: all 0.2s ease
 
             @media screen and ( max-width: 660px )
+                display: flex
                 font-size: 12px
                 padding: 8px
                 margin: 6px
